@@ -92,6 +92,8 @@
       callbacks.forEach( function ( callback ) {
         callback( null, blog );
       });
+
+      document.title = "gifcity - " + blog.name;
     },
 
     handleResponse: function ( blog, json ) {
