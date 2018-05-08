@@ -263,7 +263,7 @@
     return this.filter( predicate )[0];
   };
 
-  var t = Util.getParameterByName( 't' ) || 'classics',
+  var t = Util.getParameterByName( 't' ) || 'pi-slices',
       viewingListEl = $( '.viewing-list' ),
       blogTemplate = $( '#blog[type="text/template"]' ).innerHTML;
 
