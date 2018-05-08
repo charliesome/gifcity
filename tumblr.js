@@ -263,7 +263,7 @@
     return this.filter( predicate )[0];
   };
 
-  var t = Util.getParameterByName( 't' ) || 'pi-slices',
+  var t = Util.getParameterByName( 't' ) || 'thegifconnoisseur,ntrnts,pi-slices,dvdp,patakk,nasagifs,karmanistic,psychedelicgifs,beesandbombs',
       viewingListEl = $( '.viewing-list' ),
       blogTemplate = $( '#blog[type="text/template"]' ).innerHTML;
 
