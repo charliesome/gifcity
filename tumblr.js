@@ -264,7 +264,7 @@
     return this.filter( predicate )[0];
   };
 
-  var t = Util.getParameterByName( 't' ) || 'ntrnts,pi-slices,dvdp,patakk,karmanistic,psychedelicgifs,beesandbombs',
+  var t = Util.getParameterByName( 't' ) || 'ntrnts,pi-slices,dvdp,patakk,karmanistic,psychedelicgifs,beesandbombs,gifartistscollective',
       viewingListEl = $( '.viewing-list' ),
       blogTemplate = $( '#blog[type="text/template"]' ).innerHTML;
 
