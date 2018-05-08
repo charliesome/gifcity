@@ -264,9 +264,7 @@
     return this.filter( predicate )[0];
   };
 
-  var t = Util.getParameterByName( 't' ) || 'ntrnts,pi-slices,dvdp,patakk,karmanistic,psychedelicgifs,beesandbombs,gifartistscollective',
-      viewingListEl = $( '.viewing-list' ),
-      blogTemplate = $( '#blog[type="text/template"]' ).innerHTML;
+  var t = Util.getParameterByName( 't' ) || 'ntrnts,pi-slices,dvdp,patakk,karmanistic,psychedelicgifs,beesandbombs,gifartistscollective';
 
   window.Tumblr = Tumblr;
   Tumblr.init( t.split( ',' ) );
@@ -274,20 +272,6 @@
   Tumblr.gifCountChangedCallback = function ( blog ) {
     $( '.blog[data-name="' + blog.name + '"] .count' ).innerHTML = blog.gifs.length;
   }
-
-  $( 'form' ).addEventListener( 'submit', function ( event ) {
-    var newBlog = newBlog = $( 'input', event.target ).value;
-    Tumblr.addBlog( newBlog )
-    event.preventDefault();
-  });
-
-  // Update page elements
-  Tumblr.blogs.forEach( function ( blog ) {
-    var view = blogTemplate.replace( /\{\{ name \}\}/g, blog.name ).
-               replace( /\{\{ count \}\}/g, blog.gifs.length );
-
-    viewingListEl.innerHTML += view;
-  });
 
   // Remove buttons
   $( 'html' ).addEventListener( 'click', function ( event ) {
