@@ -92,8 +92,6 @@
       callbacks.forEach( function ( callback ) {
         callback( null, blog );
       });
-
-      document.title = "gifcity - " + blog.name;
     },
 
     handleResponse: function ( blog, json ) {
@@ -156,6 +154,7 @@
         var preload = new Image();
 
         preload.onload = function () {
+          document.title = "gifcity - " + Tumblr.current.blog.name;
           Tumblr.imageHolder.innerHTML = "" +
             "<img src='" + Tumblr.current.gif + "' class='left-image'>" +
             "<img src='" + Tumblr.current.gif + "' class='image'>" +
